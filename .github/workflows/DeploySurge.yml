@@ -34,7 +34,7 @@ jobs:
     
     # Deploy App to Surge
     - name: Deploying Profect to Surge
-      run: surge ./ ahsan_jsprojects --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./ ahsan_jsprojects.surge.sh --token ${{ secrets.SURGE_TOKEN }}
   
   
   

@@ -5,10 +5,18 @@ const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
 // All fundtions
-// function to shoe error
+// function to show error
 function showError(input,message) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control error'
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    small.innerText = message;
+}
+
+// FUnction to show success
+function showSucess(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
 }
 
 
@@ -19,6 +27,26 @@ form.addEventListener('submit',function(e) {
     
     if (username.value === '') {
         showError(username,'Username is required')
+    } else {
+        showSucess(username);
+    }
+
+    if (email.value === '') {
+        showError(email,'email is required')
+    } else {
+        showSucess(email);
+    }
+
+    if (password.value === '') {
+        showError(password,'password is required')
+    } else {
+        showSucess(password);
+    }
+    
+    if (password2.value === '') {
+        showError(password2,'password2 is required')
+    } else {
+        showSucess(password2);
     }
 })
 

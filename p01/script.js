@@ -13,12 +13,17 @@ function showError(input,message) {
     small.innerText = message;
 }
 
-// FUnction to show success
+// Function to show success
 function showSucess(input) {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
 }
 
+// Function to check is email is valid 
+function isValidEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
 
 // This is an event listener for the form on submit button
@@ -32,19 +37,21 @@ form.addEventListener('submit',function(e) {
     }
 
     if (email.value === '') {
-        showError(email,'email is required')
+        showError(email,'Email is required')
+    } else if (!isValidEmail(email.value)) {
+        showError(email,'Email is invalid')
     } else {
         showSucess(email);
     }
 
     if (password.value === '') {
-        showError(password,'password is required')
+        showError(password,'Password is required')
     } else {
         showSucess(password);
     }
-    
+
     if (password2.value === '') {
-        showError(password2,'password2 is required')
+        showError(password2,'Password is not matched with above password')
     } else {
         showSucess(password2);
     }

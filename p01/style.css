@@ -12,6 +12,9 @@
 
 body {
     background-color: hsla(0, 0%, 50%, 0.1);
+    background-image: url('Background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Open Sans', sans-serif;
     display: flex;
     align-items: center;

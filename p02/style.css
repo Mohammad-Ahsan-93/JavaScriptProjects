@@ -111,4 +111,20 @@ p.text span {
     color: aqua;
     }
 
+.home {
+    cursor: pointer;
+    background-color: black;
+    border: 2px solid orangered;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    font-size: 16px;
+    padding: 5px 90px;
+    margin-top: 20px;
+    width: 100%;
+    }
+    
+a {
+    text-decoration: none;
+    }    
 

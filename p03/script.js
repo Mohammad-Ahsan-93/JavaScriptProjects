@@ -78,4 +78,3 @@ stop.addEventListener('click', stopVideo);
 
 // 7 - Progress Bar - change postion to change time of playback
 progress.addEventListener('change', setProgress);
-

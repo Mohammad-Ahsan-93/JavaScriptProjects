@@ -5,15 +5,10 @@ const doubleMoneyButton = document.getElementById('double');
 const showMellionairesButton = document.getElementById('show-millionaires');
 const sortButton = document.getElementById('sort');
 const totalButton = document.getElementById('calculate-total');
+const reset = document.getElementById('reset');
 
 // initializing Data Array
 let data = [];
-
-// Create Initial Users
-generateRandomUser();
-generateRandomUser();
-generateRandomUser();
-
 
 // FUnction to fetch Random User from API
 // API: randomuser.me/api
@@ -28,6 +23,12 @@ async function generateRandomUser() {
         worth: Math.round(Math.random()*1000000)
     }
     addData(newUser);
+}
+
+// Add Newly Generated User into Data Array 
+function addData(newUser) {
+    data.push(newUser);
+    updateDom();
 }
 
 // Function to Double the Net Worth of Each User 
@@ -53,13 +54,6 @@ function showMillionaires() {
     updateDom();
 } 
 
-// Add Newly Generated User into Data Array 
-function addData(newUser) {
-    data.push(newUser);
-
-    updateDom();
-}
-
 // Function to Calculate Total Net Worth of all Users
 function calculateTotalNetWorth() {
     const totalWorth = data.reduce(
@@ -69,6 +63,11 @@ function calculateTotalNetWorth() {
     totalNetWorth.innerHTML = `<h3>Total Net Worth: <strong>${formatCurrency(totalWorth)}</strong></h3>`;
     main.appendChild(totalNetWorth);
 } 
+
+// Function to Rest DOM
+function resetDom() {
+    main.innerHTML = '<h2><strong>Name</strong> Net Worth</h2>'
+}
 
 // Function to Update the UI with DOM
 function updateDom(inputData = data) {
@@ -102,3 +101,6 @@ showMellionairesButton.addEventListener('click', showMillionaires);
 
 // 5. Add Calculate Total Wealth Event Listner
 totalButton.addEventListener('click', calculateTotalNetWorth);
+
+// 6. Add Reset Event Listner
+reset.addEventListener('click', resetDom);

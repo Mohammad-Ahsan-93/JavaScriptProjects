@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(253, 173, 1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.img {
+    width: 200px
+}
+
+.img:hover {
+    transform: scale(1.1);
+}
+
+#amount-one {
+    width: 100%;
+    border: 2px solid white;
+}
+.currency {
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currency select {
+    padding: 1px 10px;
+    border: 2px solid white;
+    font-size: 16px;
+    width: 60%;
+}
+
+.currency input {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+    width: 50%;
+}
+
+select:focus, input:focus, button:focus {
+    outline: 0;
+}
+
+#button {
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px 100px;
+    border: 1px solid black;
+    margin-top: 30px;
+    
+}
+
+.rate {
+    color: white;
+    font-size: 22px;
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+}

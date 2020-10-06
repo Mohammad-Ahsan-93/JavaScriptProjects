@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>My Landing Page</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Random User Image">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <button class="toggle" id="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Landing Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, atque!</p>
+        <button class="apply" id="open">Apply Now</button>
+    </header>
+
+    <div class="container">
+        <h2>Cloud Native Computing</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt enim sint exercitationem asperiores illum praesentium atque corrupti vel. Eaque veniam, molestias doloremque cumque doloribus aperiam officiis esse quasi corporis laudantium explicabo magni! Ex odio, recusandae laboriosam aspernatur officia molestias nobis labore debitis, dolorem sint nisi error, commodi nam obcaecati. Repudiandae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ratione distinctio soluta atque vel non velit dicta voluptas nam provident?</p>
+
+        <h2>More Information</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad modi ratione mollitia ea iste ab. Alias omnis error dolor nobis illo magnam consequatur nisi rem a, accusantium asperiores temporibus doloremque praesentium tenetur cumque. Et labore amet molestias optio dicta quibusdam quos blanditiis minima veritatis. Eligendi esse hic blanditiis eos laudantium.</p>
+
+        <h2>Syllabus</h2>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+        </ul>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam autem, ducimus dolore cum quasi facere eos fuga aperiam nulla deserunt ex asperiores, quam nobis officia hic sunt! Adipisci pariatur nisi sapiente aut et facere iusto perspiciatis quod possimus nam fuga exercitationem quam suscipit quisquam dignissimos quae vero dolorem doloremque nemo fugiat consequuntur placeat, corrupti autem dolorum? Odio, deleniti. Consequatur laudantium, harum pariatur quasi earum quibusdam! Quia expedita architecto corporis illum? Necessitatibus iusto officiis vel cum iure labore assumenda repellendus veniam quod fugiat velit inventore minima amet alias, saepe eius hic, officia voluptatibus modi quos at, magni in excepturi atque. Dolorum!</p>
+    </div>
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>Apply</h3>
+            </div>
+            <div class="modal-content">
+                <p>To sign up class, please submit form</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Full Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                    </div>
+                    <input type="submit" value="Submit" class="Submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

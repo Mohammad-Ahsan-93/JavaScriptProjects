@@ -17,8 +17,10 @@ async function generateRandomUser() {
     const data = await res.json();
  
     const user = data.results[0];
+    console.log(user);
     
     const newUser = {
+        image: user.picture.thumbnail,
         name: `${user.name.first} ${user.name.last}`,
         worth: Math.round(Math.random()*1000000)
     }
@@ -66,17 +68,17 @@ function calculateTotalNetWorth() {
 
 // Function to Rest DOM
 function resetDom() {
-    main.innerHTML = '<h2><strong>Name</strong> Net Worth</h2>'
+    main.innerHTML = '<h2> <strong> Picture </strong> <strong> Name </strong> Net Worth</h2>'
 }
 
 // Function to Update the UI with DOM
 function updateDom(inputData = data) {
-    main.innerHTML = '<h2><strong>Name</strong> Net Worth</h2>'
+    main.innerHTML = '<h2> <strong> Picture </strong> <strong> Name </strong> Net Worth</h2>'
 
     inputData.forEach( item => {
         const element = document.createElement('div');
         element.classList.add('name');
-        element.innerHTML = `<strong>${item.name}</strong> ${formatCurrency(item.worth)}`;
+        element.innerHTML = `<img src=${item.image}> <strong>${item.name}</strong> ${formatCurrency(item.worth)}`;
         main.appendChild(element);
     } );
 }

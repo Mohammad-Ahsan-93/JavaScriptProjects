@@ -45,16 +45,6 @@ function pauseSong() {
     audio.pause();
 }
 
-// Function to stop a Song
-function stopSong() {
-    musiContainer.classList.remove('play');
-    playButton.querySelector('i.fas').classList.remove('fa-pause');   
-    playButton.querySelector('i.fas').classList.add('fa-play');
-
-    loadSong(songList[currentSong]);
-}
-
-
 // Fuction to Switch Previous Song
 function prevSong() {
     currentSong--;
@@ -124,6 +114,4 @@ progressContainer.addEventListener('click', setProgress);
 // 6. Automatically Play next song
 audio.addEventListener('ended', nextSong);
 
-// 7. To Stop a Song
-stopButton.addEventListener('click', stopSong);
 

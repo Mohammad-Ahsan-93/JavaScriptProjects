@@ -73,6 +73,7 @@ function resetDom() {
 
 // Function to Update the UI with DOM
 function updateDom(inputData = data) {
+    // In inputData = data, data is default value so "=" is used to define default value 
     main.innerHTML = '<h2> <strong> Picture </strong> <strong> Name </strong> Net Worth</h2>'
 
     inputData.forEach( item => {

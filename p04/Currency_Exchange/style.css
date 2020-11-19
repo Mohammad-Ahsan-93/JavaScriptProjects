@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100vh;  
     margin: 0;
     padding: 20px;
 }
@@ -41,7 +41,7 @@ p {
 }
 
 .money-img {
-    width: 200px
+    width: 200px;
 }
 
 .money-img:hover {
